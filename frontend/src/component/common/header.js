@@ -21,7 +21,7 @@ import Button from "react-bootstrap/Button";
     if(email){
       this.setState({username:email})
     }else{
-      console.log('something went wrong please try again')
+      alert('something went wrong please try again')
     }
   }
 

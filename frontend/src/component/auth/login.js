@@ -10,8 +10,8 @@ import Button from "react-bootstrap/Button";
   constructor() {
     super();
     this.state = {
-      username: "test1@test.com",
-      password: "123456",
+      username: "", //test1@test.com
+      password: "", //123456
       token: "",
       loading: false,
       loginStatus: false
@@ -73,7 +73,7 @@ import Button from "react-bootstrap/Button";
                     <Form.Label>Email</Form.Label>
                     <Form.Control
                       type="email"
-                      placeholder="Enter username"
+                      placeholder="Enter email"
                       value={this.state.username}
                       onChange={(e) =>
                         this.setState({ username: e.target.value })

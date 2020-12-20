@@ -39,7 +39,7 @@ class DeviceData(models.Model):
     fieldDataTwo = models.CharField(max_length=64)
     fieldDataThree = models.CharField(max_length=64)
     date = models.DateTimeField(auto_now_add=True)
-    remoteIP = models.FloatField()
+    remoteIP = models.CharField(max_length=64)
 
     def __str__(self):
         return f"'user: '{self.username}'  deviceID: '{self.deviceID}'  fieldDataOne '{self.fieldDataOne}'   fieldTypeTwo: '{self.fieldDataTwo}'   fieldDataThree '{self.fieldDataThree}'   Date: '{self.date}'  remote IP: '{self.remoteIP}"

@@ -23,11 +23,11 @@ import Button from "react-bootstrap/Button";
     this.setState({ loading: true });
     
     let {email, name, password, password2} = this.state
-    console.log(email)
+    /* console.log(email)
     console.log(password)
     console.log(name)
     console.log(password2)
-
+ */
     let formData = new FormData();
     formData.append('username', email)
     formData.append('email',email)
@@ -99,7 +99,7 @@ import Button from "react-bootstrap/Button";
                     <Form.Label>Password</Form.Label>
                     <Form.Control
                       type="password"
-                      placeholder="Enter email"
+                      placeholder="Enter password"
                       value={this.state.password}
                       onChange={(e) =>
                         this.setState({ password: e.target.value })
@@ -111,7 +111,7 @@ import Button from "react-bootstrap/Button";
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control
                       type="password"
-                      placeholder="Enter email"
+                      placeholder="Re-Enter password"
                       value={this.state.password2}
                       onChange={(e) =>
                         this.setState({ password2: e.target.value })

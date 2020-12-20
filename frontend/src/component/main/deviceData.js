@@ -39,7 +39,7 @@ class Homepage extends React.Component {
     this.getDeviceDetial()
     setInterval(()=>{
       this.getDeviceData()
-    },2000)
+    },1000)
   }
 
   getDeviceData = () => {
@@ -77,10 +77,10 @@ class Homepage extends React.Component {
   }
 
   render() {
-    let { data, DeviceData } = this.state
+    let { data, DeviceData, username } = this.state
     
-    console.log(data)
-    console.log(data.filter(obj=>obj.id===15))
+   // console.log(data)
+   // console.log(data.filter(obj=>obj.id===15))
 
     return (
       <AdminLayout>
@@ -109,7 +109,8 @@ class Homepage extends React.Component {
               </thead>
               <tbody>
                 {DeviceData.reverse().map((dat) => {
-                  if(dat)
+                  
+                  if(dat.username == username){
                   return (
                     <tr >
                       <td>{dat.id}</td>
@@ -122,6 +123,7 @@ class Homepage extends React.Component {
                       <td>{dat.remoteIP}</td>
                     </tr>
                   )
+                  }
                 })
                 }
               </tbody>

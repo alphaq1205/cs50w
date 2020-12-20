@@ -17,7 +17,8 @@ class Homepage extends React.Component {
       loading: false,
       stillLogin: false,
       username: '',
-      loading: ''
+      loading: '',
+      email:''
     };
   }
 
@@ -50,7 +51,7 @@ class Homepage extends React.Component {
         this.setState({ data: response })
       })
       .catch((error) => {
-        console.log(error)
+       // console.log(error)
         alert("Something went wrong please try again");
       })
   }
@@ -80,7 +81,7 @@ class Homepage extends React.Component {
 
   render() {
 
-    let { data } = this.state
+    let { data, username } = this.state
     
     return (
       <AdminLayout>
@@ -111,6 +112,8 @@ class Homepage extends React.Component {
                 {
 
                   data.reverse().map((dta) => {
+                   
+                    if(dta.user == username){
                     
                     return (
                       <tr>
@@ -160,6 +163,7 @@ class Homepage extends React.Component {
                         </td>
                       </tr>
                     )
+                  }
                   })
                 }
               </tbody>

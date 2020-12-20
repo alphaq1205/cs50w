@@ -94,7 +94,7 @@ class Homepage extends React.Component {
 
       })
       .catch((error) => {
-        console.log(error)
+       // console.log(error)
         alert("Something went wrong please try again");
 
       })
@@ -113,7 +113,7 @@ class Homepage extends React.Component {
         this.setState({ fieldData: response })
       })
       .catch((error) => {
-        console.log(error)
+       // console.log(error)
         alert("Something went wrong please try again");
 
       })

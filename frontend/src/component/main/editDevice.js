@@ -62,7 +62,7 @@ export default class AddDevice extends React.Component {
     })
       .then((responseJson) => responseJson.json())
       .then((res) => {
-        console.log(res)
+      //  console.log(res)
         this.setState({
           description: res.description,
           deviceName: res.deviceName,
@@ -181,7 +181,7 @@ export default class AddDevice extends React.Component {
                       <Form.Control
                         type="text"
                         className="form-control"
-                        placeholder="Git Website Address"
+                        placeholder="Field Name One"
                         value={fieldNameOne}
                         onChange={(e) =>
                           this.setState({ fieldNameOne: e.target.value })
@@ -208,7 +208,7 @@ export default class AddDevice extends React.Component {
                       <Form.Control
                         type="text"
                         className="form-control"
-                        placeholder="Git Website Address"
+                        placeholder="Field Name Two"
                         value={fieldNameTwo}
                         onChange={(e) =>
                           this.setState({ fieldNameTwo: e.target.value })
@@ -235,7 +235,7 @@ export default class AddDevice extends React.Component {
                       <Form.Control
                         type="text"
                         className="form-control"
-                        placeholder="Git Website Address"
+                        placeholder="Field Name Three"
                         value={fieldNameThree}
                         onChange={(e) =>
                           this.setState({ fieldNameThree: e.target.value })

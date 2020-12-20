@@ -76,7 +76,7 @@ class Homepage extends React.Component {
         this.setState({ data: response })
       })
       .catch((error) => {
-        console.log(error)
+       // console.log(error)
         alert("Something went wrong please try again");
       })
   }

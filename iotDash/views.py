@@ -58,6 +58,9 @@ def deviceData_view(request, device_id, user_name):
             fieldDataTwo = request.POST.get("fieldDataTwo")
             fieldDataThree = request.POST.get("fieldDataThree")
             remoteIP = ip_address
+            print(hostname)
+            print(remoteIP)
+            print('*****************************')
             device_data = DeviceData(
                 username=username,
                 deviceID=deviceID,
